@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_two.dart';
 
 class OnboardingScreenOne extends StatefulWidget {
   const OnboardingScreenOne({super.key});
@@ -26,7 +27,7 @@ class _OnboardingScreenOneState extends State<OnboardingScreenOne> {
                 children: [
                   Column(
                     children: [
-                      Image.asset('assets/images/img1.png',width: 150,),
+                      Image.asset('assets/images/img1.png',width: (size.width-20)/2.5,),
                       SizedBox(height: 10,),
                       Text('Turn your notes, lectures, and videos into flashcards, quizzes, study guides and fun study games',textAlign: TextAlign.center,style: TextStyle(
                         //fontSize: 12,
@@ -100,7 +101,9 @@ class _OnboardingScreenOneState extends State<OnboardingScreenOne> {
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.pushReplacementNamed(context, OnboardingScreenTwo.name);
+                        },
                         child: Text('Next',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
                         style: ElevatedButton.styleFrom(
                             fixedSize: Size.fromWidth(double.maxFinite),

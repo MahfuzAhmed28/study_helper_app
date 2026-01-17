@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_one.dart';
+import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_three.dart';
 import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_two.dart';
 import 'package:study_helper_app/features/splash/ui/screens/splash_screen.dart';
 
@@ -14,6 +15,9 @@ class AppRoutes {
     }
     else if(settings.name==OnboardingScreenTwo.name){
       route=OnboardingScreenTwo();
+    }
+    else if(settings.name==OnboardingScreenThree.name){
+      route=OnboardingScreenThree();
     }
 
     return MaterialPageRoute(builder: (context){

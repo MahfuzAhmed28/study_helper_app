@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_three.dart';
 
-class OnboardingScreenTwo extends StatefulWidget {
-  const OnboardingScreenTwo({super.key});
+class OnboardingScreenThree extends StatefulWidget {
+  const OnboardingScreenThree({super.key});
 
-  static const String name='/onboarding-screen-two';
+  static const String name='/onboarding-screen-three';
 
   @override
-  State<OnboardingScreenTwo> createState() => _OnboardingScreenTwoState();
+  State<OnboardingScreenThree> createState() => _OnboardingScreenThreeState();
 }
 
-class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
+class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
   @override
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
@@ -27,7 +26,7 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
                   children: [
                     Image.asset('assets/images/img1.png',width: (size.width-20)/2.5,),
                     SizedBox(height: 10,),
-                    Text('How It Works',textAlign: TextAlign.center,style: TextStyle(
+                    Text("Why you'll Love It",textAlign: TextAlign.center,style: TextStyle(
                       //fontSize: 12,
                     ),),
                     SizedBox(height: 20,)
@@ -37,8 +36,35 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
                     children: [
-                      Image.asset('assets/images/img6.png',width: size.width/2,height: 120,),
-                      SizedBox(height: 10,),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: Container(
+                          padding: EdgeInsets.all(20),
+                          width: double.maxFinite,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade300,
+                                  blurRadius: 8,
+                                  spreadRadius: 2,
+                                  offset: Offset(1, 1)
+                              )
+                            ]
+                          ),
+                          child: Column(
+                            children: [
+                              Image.asset('assets/images/img3.png'),
+                              SizedBox(height: 10,),
+                              Text('Play games with friends',style: TextStyle(
+                                fontSize: 16
+                              ),)
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 20,),
                       Text('Record or Upload your lectures and MyStudyBuddy will turn them into organized notes you can highlight, review and study from - instantly',textAlign: TextAlign.center,),
                       SizedBox(height: 20,),
                     ],
@@ -62,7 +88,7 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
                           width: 8,
                           height: 8,
                           decoration: BoxDecoration(
-                              color: Color(0xFFb8aee0),
+                              color: Colors.grey[400],
                               shape: BoxShape.circle
                           ),
                         ),
@@ -71,30 +97,17 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
                           width: 8,
                           height: 8,
                           decoration: BoxDecoration(
-                              color: Colors.grey[400],
+                              color: Color(0xFFb8aee0),
                               shape: BoxShape.circle
                           ),
                         ),
 
                       ],
                     ),
-                    SizedBox(height: 5,),
+                    SizedBox(height: 20,),
                     ElevatedButton(
                       onPressed: (){},
-                      child: Text('Skip',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
-                      style: ElevatedButton.styleFrom(
-                          fixedSize: Size.fromWidth(double.maxFinite),
-                          padding: EdgeInsets.all(15),
-                          backgroundColor: Colors.white,
-                          foregroundColor: Colors.black,
-                          elevation: 0
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: (){
-                        Navigator.pushReplacementNamed(context, OnboardingScreenThree.name);
-                      },
-                      child: Text('Next',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
+                      child: Text('Continue',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
                       style: ElevatedButton.styleFrom(
                           fixedSize: Size.fromWidth(double.maxFinite),
                           padding: EdgeInsets.all(15),

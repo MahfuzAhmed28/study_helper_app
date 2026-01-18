@@ -59,31 +59,19 @@ class _OnboardingScreenOneState extends State<OnboardingScreenOne> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                                color: Color(0xFFb8aee0),
-                                shape: BoxShape.circle
-                            ),
+                          CircleAvatar(
+                            radius: 4,
+                            backgroundColor: Color(0xFFb8aee0),
                           ),
                           SizedBox(width: 10,),
-                          Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                                color: Colors.grey[400],
-                                shape: BoxShape.circle
-                            ),
+                          CircleAvatar(
+                            radius: 4,
+                            backgroundColor: Colors.grey[400],
                           ),
                           SizedBox(width: 10,),
-                          Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                                color: Colors.grey[400],
-                                shape: BoxShape.circle
-                            ),
+                          CircleAvatar(
+                            radius: 4,
+                            backgroundColor: Colors.grey[400],
                           ),
 
                         ],

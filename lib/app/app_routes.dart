@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_helper_app/features/auth/ui/screens/auth_options_screen.dart';
 import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_one.dart';
 import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_three.dart';
 import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_two.dart';
@@ -18,6 +19,9 @@ class AppRoutes {
     }
     else if(settings.name==OnboardingScreenThree.name){
       route=OnboardingScreenThree();
+    }
+    else if(settings.name==AuthOptionsScreen.name){
+      route=AuthOptionsScreen();
     }
 
     return MaterialPageRoute(builder: (context){

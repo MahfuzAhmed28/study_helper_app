@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_helper_app/features/auth/ui/screens/auth_options_screen.dart';
 import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_three.dart';
 
 class OnboardingScreenTwo extends StatefulWidget {
@@ -68,7 +69,9 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
                     ),
                     SizedBox(height: 5,),
                     ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushReplacementNamed(context, AuthOptionsScreen.name);
+                      },
                       child: Text('Skip',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
                       style: ElevatedButton.styleFrom(
                           fixedSize: Size.fromWidth(double.maxFinite),

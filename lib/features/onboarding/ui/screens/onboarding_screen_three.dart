@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_helper_app/features/auth/ui/screens/auth_options_screen.dart';
 
 class OnboardingScreenThree extends StatefulWidget {
   const OnboardingScreenThree({super.key});
@@ -106,7 +107,9 @@ class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
                     ),
                     SizedBox(height: 20,),
                     ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushReplacementNamed(context, AuthOptionsScreen.name);
+                      },
                       child: Text('Continue',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
                       style: ElevatedButton.styleFrom(
                           fixedSize: Size.fromWidth(double.maxFinite),

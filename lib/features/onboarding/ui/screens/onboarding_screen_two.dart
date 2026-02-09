@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:study_helper_app/features/auth/ui/screens/auth_options_screen.dart';
 import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_three.dart';
 
@@ -26,22 +27,29 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
               children: [
                 Column(
                   children: [
-                    Image.asset('assets/images/img1.png',width: (size.width-20)/2.5,),
-                    SizedBox(height: 10,),
+                    5.verticalSpace,
+                    Image.asset('assets/images/img1.png',width: 130.w),
+                    10.verticalSpace,
                     Text('How It Works',textAlign: TextAlign.center,style: TextStyle(
-                      //fontSize: 12,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey[700]
                     ),),
-                    SizedBox(height: 20,)
+                    10.verticalSpace
                   ],
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
                     children: [
-                      Image.asset('assets/images/img6.png',width: size.width/2,height: 120,),
-                      SizedBox(height: 10,),
-                      Text('Record or Upload your lectures and MyStudyBuddy will turn them into organized notes you can highlight, review and study from - instantly',textAlign: TextAlign.center,),
-                      SizedBox(height: 20,),
+                      Image.asset('assets/images/img6.png',width: 100.w,),
+                      10.verticalSpace,
+                      Text('Record or Upload your lectures and MyStudyBuddy will turn them into organized notes you can highlight, review and study from --- instantly',textAlign: TextAlign.center,style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.grey[600]
+                      ),),
+                      20.verticalSpace
                     ],
                   ),
                 ),
@@ -51,31 +59,30 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CircleAvatar(
-                          radius: 4,
+                          radius: 4.r,
                           backgroundColor: Colors.grey[400],
                         ),
-                        SizedBox(width: 10,),
+                        10.horizontalSpace,
                         CircleAvatar(
-                          radius: 4,
+                          radius: 4.r,
                           backgroundColor: Color(0xFFb8aee0),
                         ),
-                        SizedBox(width: 10,),
+                        10.horizontalSpace,
                         CircleAvatar(
-                          radius: 4,
+                          radius: 4.r,
                           backgroundColor: Colors.grey[400],
                         ),
 
                       ],
                     ),
-                    SizedBox(height: 5,),
                     ElevatedButton(
                       onPressed: (){
                         Navigator.pushReplacementNamed(context, AuthOptionsScreen.name);
                       },
-                      child: Text('Skip',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
+                      child: Text('Skip',style: TextStyle(fontSize: 15.sp,fontWeight: FontWeight.w500),),
                       style: ElevatedButton.styleFrom(
                           fixedSize: Size.fromWidth(double.maxFinite),
-                          padding: EdgeInsets.all(15),
+                          padding: EdgeInsets.all(9.h),
                           backgroundColor: Colors.white,
                           foregroundColor: Colors.black,
                           elevation: 0
@@ -85,10 +92,10 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
                       onPressed: (){
                         Navigator.pushReplacementNamed(context, OnboardingScreenThree.name);
                       },
-                      child: Text('Next',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
+                      child: Text('Next',style: TextStyle(fontSize: 15.sp,fontWeight: FontWeight.w500),),
                       style: ElevatedButton.styleFrom(
                           fixedSize: Size.fromWidth(double.maxFinite),
-                          padding: EdgeInsets.all(15),
+                          padding: EdgeInsets.all(9.h),
                           backgroundColor: Color(0xFFb8aee0),
                           foregroundColor: Colors.black,
                           elevation: 6,

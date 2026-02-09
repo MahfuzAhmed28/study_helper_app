@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:study_helper_app/features/flashcard_creation/ui/screens/uploader_screen.dart';
 import 'package:study_helper_app/features/onboarding/ui/screens/onboarding_screen_one.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -21,25 +23,24 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> _moveToNextScreen() async{
     await Future.delayed(Duration(seconds: 2));
-    Navigator.pushReplacementNamed(context, OnboardingScreenOne.name);
+    Navigator.pushReplacementNamed(context, UploaderScreen.name);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Image.asset('assets/images/img1.png',width: 200,),
-          ),
-          SizedBox(height: 20,),
-          Text('My Study Buddy',style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 25
-          ),)
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/img1.png',height: 200.h,),
+            Text('My Study Buddy',style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 25.sp
+            ),)
+          ],
+        ),
       ),
     );
   }

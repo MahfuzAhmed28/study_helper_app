@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:study_helper_app/features/auth/ui/screens/auth_options_screen.dart';
 
 class OnboardingScreenThree extends StatefulWidget {
@@ -25,12 +26,14 @@ class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
               children: [
                 Column(
                   children: [
-                    Image.asset('assets/images/img1.png',width: (size.width-20)/2.5,),
-                    SizedBox(height: 10,),
+                    5.verticalSpace,
+                    Image.asset('assets/images/img1.png',width: 130.w),
+                    10.verticalSpace,
                     Text("Why you'll Love It",textAlign: TextAlign.center,style: TextStyle(
-                      //fontSize: 12,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey[700]
                     ),),
-                    SizedBox(height: 20,)
                   ],
                 ),
                 Padding(
@@ -43,7 +46,7 @@ class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
                           padding: EdgeInsets.all(20),
                           width: double.maxFinite,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(20.r),
                             color: Colors.white,
                             boxShadow: [
                               BoxShadow(
@@ -57,15 +60,15 @@ class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
                           child: Column(
                             children: [
                               Image.asset('assets/images/img3.png'),
-                              SizedBox(height: 10,),
+                              10.verticalSpace,
                               Text('Play games with friends',style: TextStyle(
-                                fontSize: 16
+                                fontSize: 16.sp
                               ),)
                             ],
                           ),
                         ),
                       ),
-                      SizedBox(height: 20,),
+                      20.verticalSpace,
                       Text('Record or Upload your lectures and MyStudyBuddy will turn them into organized notes you can highlight, review and study from - instantly',textAlign: TextAlign.center,),
                       SizedBox(height: 20,),
                     ],
@@ -76,44 +79,32 @@ class _OnboardingScreenThreeState extends State<OnboardingScreenThree> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          width: 8,
-                          height: 8,
-                          decoration: BoxDecoration(
-                              color: Colors.grey[400],
-                              shape: BoxShape.circle
-                          ),
+                        CircleAvatar(
+                          radius: 4.r,
+                          backgroundColor: Color(0xFFb8aee0),
                         ),
-                        SizedBox(width: 10,),
-                        Container(
-                          width: 8,
-                          height: 8,
-                          decoration: BoxDecoration(
-                              color: Colors.grey[400],
-                              shape: BoxShape.circle
-                          ),
+                        10.horizontalSpace,
+                        CircleAvatar(
+                          radius: 4.r,
+                          backgroundColor: Colors.grey[400],
                         ),
-                        SizedBox(width: 10,),
-                        Container(
-                          width: 8,
-                          height: 8,
-                          decoration: BoxDecoration(
-                              color: Color(0xFFb8aee0),
-                              shape: BoxShape.circle
-                          ),
+                        10.horizontalSpace,
+                        CircleAvatar(
+                          radius: 4.r,
+                          backgroundColor: Colors.grey[400],
                         ),
 
                       ],
                     ),
-                    SizedBox(height: 20,),
+                    20.verticalSpace,
                     ElevatedButton(
                       onPressed: (){
                         Navigator.pushReplacementNamed(context, AuthOptionsScreen.name);
                       },
-                      child: Text('Continue',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
+                      child: Text('Continue',style: TextStyle(fontSize: 15.sp,fontWeight: FontWeight.w500),),
                       style: ElevatedButton.styleFrom(
                           fixedSize: Size.fromWidth(double.maxFinite),
-                          padding: EdgeInsets.all(15),
+                          padding: EdgeInsets.all(9.h),
                           backgroundColor: Color(0xFFb8aee0),
                           foregroundColor: Colors.black,
                           elevation: 6,

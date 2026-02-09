@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:study_helper_app/app/app_routes.dart';
 
 class StudyHelperApp extends StatefulWidget {
@@ -11,10 +12,17 @@ class StudyHelperApp extends StatefulWidget {
 class _StudyHelperAppState extends State<StudyHelperApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      onGenerateRoute: AppRoutes.onGenerateRoute,
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child){
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          initialRoute: '/',
+          onGenerateRoute: AppRoutes.onGenerateRoute,
+        );
+      }
     );
   }
 }
